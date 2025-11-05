@@ -17,19 +17,22 @@ const Home = () => {
   useEffect(() => {
     /*const value = document.cookie.includes("biscuit=");
     setIsLoggedIn(value);*/
-      const checkAuth = async () => {
-    try {
-      const res = await axios.get('https://ai-course-builder-backend-xpe2.onrender.com/me', { withCredentials: true });
-      if (res.data && res.data.user) {
-        setIsLoggedIn(true);
-      } else {
+    const checkAuth = async () => {
+      try {
+        const res = await axios.get(
+          "https://ai-course-builder-backend-xpe2.onrender.com/me",
+          { withCredentials: true }
+        );
+        if (res.data && res.data.user) {
+          setIsLoggedIn(true);
+        } else {
+          setIsLoggedIn(false);
+        }
+      } catch (err) {
         setIsLoggedIn(false);
       }
-    } catch (err) {
-      setIsLoggedIn(false);
-    }
-  };
-  checkAuth();
+    };
+    checkAuth();
   }, []);
 
   useEffect(() => {
