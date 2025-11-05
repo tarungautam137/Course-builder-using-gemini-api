@@ -23,12 +23,12 @@ app.use(
 
 const middleware = async (req, res, next) => {
   try {
-    const { bourbon } = req.cookies;
-    if (!bourbon) {
+    const { biscuit } = req.cookies;
+    if (!biscuit) {
       return res.status(401).send("Please login to access this resource");
     }
 
-    const decoded = jwt.verify(bourbon, process.env.jwtSecret);
+    const decoded = jwt.verify(biscuit, process.env.jwtSecret);
     const { id } = decoded;
 
     const user = await UserModel.findById(id);
