@@ -56,7 +56,7 @@ app.post("/signup", async (req, res) => {
 
     const token = savedUser.getJWT();
 
-    res.cookie("bourbon", token, {
+    res.cookie("biscuit", token, {
       sameSite: "none",
       secure: true,
     });
@@ -78,7 +78,7 @@ app.post("/login", async (req, res) => {
 
     const token = user.getJWT();
 
-    res.cookie("bourbon", token, {
+    res.cookie("biscuit", token, {
       sameSite: "none",
       secure: true,
     });
