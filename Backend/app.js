@@ -61,6 +61,7 @@ app.post("/signup", async (req, res) => {
       sameSite: "none",
       secure: true,
       domain: ".onrender.com",
+      path: "/"
     });
 
     res.json({ message: "User saved successfully", data: savedUser });
@@ -85,6 +86,7 @@ app.post("/login", async (req, res) => {
       sameSite: "none",
       secure: true,
       domain: ".onrender.com",
+      path: "/"
     });
     res.send("Logged in successfully");
   } catch (err) {
