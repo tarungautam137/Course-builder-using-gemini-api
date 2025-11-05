@@ -59,7 +59,8 @@ app.post("/signup", async (req, res) => {
     res.cookie("bourbon", token, {
       maxAge: 3 * 60 * 60 * 1000,
       sameSite: "none",
-      secure: true
+      secure: true,
+      domain: ".onrender.com",
     });
 
     res.json({ message: "User saved successfully", data: savedUser });
@@ -82,7 +83,8 @@ app.post("/login", async (req, res) => {
     res.cookie("bourbon", token, {
       maxAge: 3 * 60 * 60 * 1000,
       sameSite: "none",
-      secure: true
+      secure: true,
+      domain: ".onrender.com",
     });
     res.send("Logged in successfully");
   } catch (err) {
