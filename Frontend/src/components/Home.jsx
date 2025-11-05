@@ -15,7 +15,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const value = document.cookie.includes("bourbon=");
+    const value = document.cookie.includes("biscuit=");
     setIsLoggedIn(value);
   }, []);
 
