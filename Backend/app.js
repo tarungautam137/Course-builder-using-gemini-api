@@ -56,7 +56,11 @@ app.post("/signup", async (req, res) => {
 
     const token = savedUser.getJWT();
 
-    res.cookie("bourbon", token, { maxAge: 3 * 60 * 60 * 1000 ,sameSite:"none",secure:true,httpOnly:true});
+    res.cookie("bourbon", token, {
+      maxAge: 3 * 60 * 60 * 1000,
+      sameSite: "none",
+      secure: true
+    });
 
     res.json({ message: "User saved successfully", data: savedUser });
   } catch (err) {
@@ -75,7 +79,11 @@ app.post("/login", async (req, res) => {
 
     const token = user.getJWT();
 
-    res.cookie("bourbon", token, { maxAge: 3 * 60 * 60 * 1000 ,sameSite:"none",secure:true,httpOnly:true});
+    res.cookie("bourbon", token, {
+      maxAge: 3 * 60 * 60 * 1000,
+      sameSite: "none",
+      secure: true
+    });
     res.send("Logged in successfully");
   } catch (err) {
     res.status(400).send(" " + err.message);
