@@ -60,8 +60,6 @@ app.post("/signup", async (req, res) => {
       maxAge: 3 * 60 * 60 * 1000,
       sameSite: "none",
       secure: true,
-      domain: ".onrender.com",
-      path: "/"
     });
 
     res.json({ message: "User saved successfully", data: savedUser });
@@ -85,9 +83,8 @@ app.post("/login", async (req, res) => {
       maxAge: 3 * 60 * 60 * 1000,
       sameSite: "none",
       secure: true,
-      domain: ".onrender.com",
-      path: "/"
     });
+
     res.send("Logged in successfully");
   } catch (err) {
     res.status(400).send(" " + err.message);
