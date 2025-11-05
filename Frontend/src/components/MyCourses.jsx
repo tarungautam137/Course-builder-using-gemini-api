@@ -8,7 +8,7 @@ const MyCourses = () => {
   useEffect(() => {
     const func = async () => {
       try {
-        const res = await axios.get("http://localhost:2607/getAllCourses", {
+        const res = await axios.get("https://ai-course-builder-backend-xpe2.onrender.com/getAllCourses", {
           withCredentials: true,
         });
         setData(res.data);

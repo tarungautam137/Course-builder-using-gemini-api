@@ -13,7 +13,7 @@ const Course = () => {
     if (!courseId) return;
     const fetchCourse = async () => {
       try {
-        const res = await axios.get("http://localhost:2607/getCourseContent", {
+        const res = await axios.get("https://ai-course-builder-backend-xpe2.onrender.com/getCourseContent", {
           params: { courseId },
           withCredentials: true,
         });

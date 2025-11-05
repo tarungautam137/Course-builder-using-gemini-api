@@ -35,13 +35,13 @@ const Home = () => {
       let res;
       if (isLogin) {
         res = await axios.post(
-          "http://localhost:2607/login",
+          "https://ai-course-builder-backend-xpe2.onrender.com/login",
           { userName, password },
           { withCredentials: true }
         );
       } else {
         res = await axios.post(
-          "http://localhost:2607/signup",
+          "https://ai-course-builder-backend-xpe2.onrender.com/signup",
           { userName, password },
           { withCredentials: true }
         );
@@ -62,7 +62,7 @@ const Home = () => {
       if (!topic.trim()) return;
       setLoading(true);
       const res = await axios.post(
-        "http://localhost:2607/generate",
+        "https://ai-course-builder-backend-xpe2.onrender.com/generate",
         { query: topic },
         { withCredentials: true }
       );
