@@ -44,8 +44,11 @@ const middleware = async (req, res, next) => {
 app.get("/me", (req, res) => {
   const token = req.cookies.biscuit; // assume cookie-parser used
   if (!token) return res.json({ user: null });
-  const user = verifyJwt(token);
+
+  const user = jwt.verify(token,process.env.jwtSecret);
+
   if (!user) return res.json({ user: null });
+  
   return res.json({ user }); // client can use this to set isLoggedIn
 });
 
