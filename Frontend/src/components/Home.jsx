@@ -6,7 +6,7 @@ import { FaRocket } from "react-icons/fa";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [topic, setTopic] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLogin, setIsLogin] = useState(true);
@@ -15,8 +15,6 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    /*const value = document.cookie.includes("biscuit=");
-    setIsLoggedIn(value);*/
     const checkAuth = async () => {
       try {
         const res = await axios.get(

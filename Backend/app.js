@@ -42,21 +42,19 @@ const middleware = async (req, res, next) => {
 };
 
 app.get("/me", (req, res) => {
-  try{
-      const token = req.cookies.biscuit; // assume cookie-parser used
+  try {
+    const token = req.cookies.biscuit; // assume cookie-parser used
 
-  if (!token) return res.json({ user: null });
+    if (!token) return res.json({ user: null });
 
-  const user = jwt.verify(token,process.env.jwtSecret);
-  
-  if (!user) return res.json({ user: null });
+    const user = jwt.verify(token, process.env.jwtSecret);
 
-  return res.json({ user }); // client can use this to set isLoggedIn
+    if (!user) return res.json({ user: null });
+
+    return res.json({ user }); // client can use this to set isLoggedIn
+  } catch (err) {
+    console.log("ERROR -->  " + err);
   }
-  catch(err){
-    console.log("ERROR -->  "+err)
-  }
-
 });
 
 app.post("/signup", async (req, res) => {
