@@ -57,18 +57,18 @@ This app allows users to generate personalized mini-courses instantly — each c
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home Page](./assets/homePage.png)
+![Home Page](./Frontend/src/assets/homePage.png)
 
 ### 📚 Generated Course Page
 
 <p align="center">
-  <img src="./assets/coursePage1.png" alt="Generated Course Page - Overview" width="45%" style="border-radius:10px; margin-right:10px;" />
-  <img src="./assets/coursePage2.png" alt="Generated Course Page - Lessons View" width="45%" style="border-radius:10px;" />
+  <img src="./Frontend/src/assets/coursePage1.png" alt="Generated Course Page - Overview" width="45%" style="border-radius:10px; margin-right:10px;" />
+  <img src="./Frontend/src/assets/coursePage2.png" alt="Generated Course Page - Lessons View" width="45%" style="border-radius:10px;" />
 </p>
 
 ### 📂 My Courses Page
-![My Courses Page](./assets/myCoursesPage.png)
+![My Courses Page](./Frontend/src/assets/myCoursesPage.png)
 
 ### 🔐 Login Page
-![Login Page](./assets/loginPage.png)
+![Login Page](./Frontend/src/assets/loginPage.png)
 
